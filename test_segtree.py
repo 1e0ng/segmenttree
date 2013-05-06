@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-import os, sys
-TEST_DIR = os.path.dirname(os.path.realpath(__file__))
-DALE_DIR = os.path.dirname(TEST_DIR)
-sys.path.insert(0, DALE_DIR)
-
-
 from unittest import main, TestCase
 
 from segtree import SegmentTree
