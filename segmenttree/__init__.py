@@ -14,7 +14,7 @@ class SegmentTree(object):
         self.data = {}
         self._init(start, end)
 
-    def add(self, start, end, weight):
+    def add(self, start, end, weight=1):
         if start < self.start or end > self.end:
             return False
         self._add(start, end, weight, self.start, self.end)

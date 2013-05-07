@@ -15,11 +15,11 @@ class TestSegmentTree(TestCase):
         segtree.add(4, 5, 1)
         self.assertEqual(2, segtree.query(2, 5))
 
-        segtree.add(3, 6, 1)
-        self.assertEqual(3, segtree.query(2, 5))
-
-        segtree.add(1, 7, 1)
+        segtree.add(3, 6, 2)
         self.assertEqual(4, segtree.query(2, 5))
+
+        segtree.add(1, 7)
+        self.assertEqual(5, segtree.query(2, 5))
 
       
 if __name__ == '__main__':
