@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from unittest import main, TestCase
 
-from segtree import SegmentTree
+from segmenttree import SegmentTree
 
 class TestSegmentTree(TestCase):
     def test_segtree(self):
