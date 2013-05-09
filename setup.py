@@ -9,7 +9,7 @@ setup(
     description = 'A Python implementation of Segment Tree',
     license = 'MIT License',
 
-    url = 'http://liangsun.org',
+    url = 'http://liangsun.org/posts/a-python-implementation-of-segment-tree/',
     author = 'Liang Sun',
     author_email = 'i@liangsun.org',
 
