@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'segmenttree',
-    version = '0.0.3',
+    version = '0.0.4',
     keywords = ('segment', 'tree'),
     description = 'A Python implementation of Segment Tree',
     license = 'MIT License',
