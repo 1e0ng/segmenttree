@@ -94,5 +94,5 @@ class SegmentTree(object):
             else:
                 ans = self._query_len(start, mid, in_start, mid) + self._query_len(mid+1, end, mid+1, in_end)
 
-        print start, end, in_start, in_end, ans
+        #print start, end, in_start, in_end, ans
         return ans
