@@ -9,8 +9,8 @@ class SegmentTree(object):
         self._init(start, end)
 
     def add(self, start, end, weight=1):
-        if start < self.start or end > self.end:
-            return False
+        start = max(start, self.start)
+        end = min(end, self.end)
         self._add(start, end, weight, self.start, self.end)
         return True
 
