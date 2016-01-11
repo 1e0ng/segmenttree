@@ -4,14 +4,14 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'segmenttree',
-    version = '0.0.7',
+    version = '1.0.0',
     keywords = ('segment', 'tree'),
     description = 'A Python implementation of Segment Tree',
     license = 'MIT License',
 
-    url = 'http://liangsun.org/posts/a-python-implementation-of-segment-tree/',
-    author = 'Liang Sun',
-    author_email = 'i@liangsun.org',
+    url = 'https://leons.im/posts/a-python-implementation-of-segment-tree/',
+    author = 'Leon S',
+    author_email = 'i@leons.im',
 
     packages = find_packages(),
     include_package_data = True,

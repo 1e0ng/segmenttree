@@ -1,5 +1,4 @@
 #encoding:utf-8
-#Created by Liang Sun on May, 6, 2013
 class SegmentTree(object):
     def __init__(self, start, end):
         self.start = start
@@ -30,7 +29,7 @@ class SegmentTree(object):
         self.sum_value[(start, end)] = 0
         self.len_value[(start, end)] = 0
         if start < end:
-            mid = start + (end - start) / 2
+            mid = start + int((end - start) / 2)
             self._init(start, mid)
             self._init(mid+1, end)
 
@@ -42,7 +41,7 @@ class SegmentTree(object):
             self.len_value[key] = 1 if self.sum_value[key] > 0 else 0
             return
 
-        mid = in_start + (in_end - in_start) / 2
+        mid = in_start + int((in_end - in_start) / 2)
         if mid >= end:
             self._add(start, end, weight, in_start, mid)
         elif mid+1 <= start:
@@ -58,7 +57,7 @@ class SegmentTree(object):
         if start == in_start and end == in_end:
             ans = self.max_value[(start, end)]
         else:
-            mid = in_start + (in_end - in_start) / 2
+            mid = in_start + int((in_end - in_start) / 2)
             if mid >= end:
                 ans = self._query_max(start, end, in_start, mid)
             elif mid+1 <= start:
@@ -73,7 +72,7 @@ class SegmentTree(object):
         if start == in_start and end == in_end:
             ans = self.sum_value[(start, end)]
         else:
-            mid = in_start + (in_end - in_start) / 2
+            mid = in_start + int((in_end - in_start) / 2)
             if mid >= end:
                 ans = self._query_sum(start, end, in_start, mid)
             elif mid+1 <= start:
@@ -86,7 +85,7 @@ class SegmentTree(object):
         if start == in_start and end == in_end:
             ans = self.len_value[(start, end)]
         else:
-            mid = in_start + (in_end - in_start) / 2
+            mid = in_start + int((in_end - in_start) / 2)
             if mid >= end:
                 ans = self._query_len(start, end, in_start, mid)
             elif mid+1 <= start:
