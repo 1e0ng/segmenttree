@@ -42,11 +42,10 @@ class TestSegmentTree(TestCase):
         self.assertEqual(4, segtree.query_len(2, 5))
         self.assertEqual(16, segtree.query_sum(2, 5))
 
-
     def test_empty(self):
         segtree = SegmentTree(0, 8)
-        segtree.add(1, 1, 1)
-        segtree.add(8, 8, 1)
+        segtree.add(1, 1)
+        segtree.add(8, 8)
         self.assertEqual(1, segtree.query_max(0, 8))
         self.assertEqual(2, segtree.query_len(0, 8))
         self.assertEqual(2, segtree.query_sum(0, 8))
