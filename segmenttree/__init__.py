@@ -8,19 +8,36 @@ class SegmentTree(object):
         self.len_value = {}
         self._init(start, end)
 
-    def add(self, start, end, weight=1):
+    def out_of_bounds_check(self, start, end):
         start = max(start, self.start)
         end = min(end, self.end)
+        if start > end:
+            return None, None
+        return start, end
+
+    def add(self, start, end, weight=1):
+        start, end = self.out_of_bounds_check(start, end)
+        if start is None:
+            return False
         self._add(start, end, weight, self.start, self.end)
         return True
 
     def query_max(self, start, end):
+        start, end = self.out_of_bounds_check(start, end)
+        if start is None:
+            return None
         return self._query_max(start, end, self.start, self.end)
 
     def query_sum(self, start, end):
+        start, end = self.out_of_bounds_check(start, end)
+        if start is None:
+            return 0
         return self._query_sum(start, end, self.start, self.end)
 
     def query_len(self, start, end):
+        start, end = self.out_of_bounds_check(start, end)
+        if start is None:
+            return 0
         return self._query_len(start, end, self.start, self.end)
 
     """"""
